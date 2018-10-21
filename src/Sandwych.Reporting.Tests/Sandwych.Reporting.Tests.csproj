@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="OfficeML\Templates\Template1.doc.xml" />
+    <None Remove="OpenDocument\Templates\Template1.odt" />
+    <None Remove="OpenDocument\Templates\Template2.ods" />
+    <None Remove="OpenDocument\Templates\Template3.odt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\JpegImage.jpeg" />
+    <EmbeddedResource Include="OfficeML\Templates\Template1.doc.xml" />
+    <EmbeddedResource Include="OpenDocument\Templates\Template1.odt" />
+    <EmbeddedResource Include="OpenDocument\Templates\Template2.ods" />
+    <EmbeddedResource Include="OpenDocument\Templates\Template3.odt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fluid.Core" Version="1.0.0-beta-9446" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.5.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sandwych.Reporting\Sandwych.Reporting.csproj" />
+  </ItemGroup>
+
+</Project>
