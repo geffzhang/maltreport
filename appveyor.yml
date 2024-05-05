@@ -12,7 +12,7 @@ build_script:
   - dotnet build -c Release
   - dotnet pack -c Release .\src\Sandwych.Reporting\Sandwych.Reporting.csproj
 test_script:
-  - dotnet test .\src\Sandwych.Reporting.Tests\Sandwych.Reporting.Tests.csproj
+  - dotnet test .\test\Sandwych.Reporting.Tests\Sandwych.Reporting.Tests.csproj
 artifacts:
   - path: 'src\Sandwych.Reporting\**\*.nupkg'
 deploy:
@@ -27,6 +27,6 @@ deploy:
       branch: master
     server: https://www.nuget.org/api/v2/package
     api_key:
-      secure: 0BDiHLhs9YIabU3WPMQB0fojg4ZCpLjHdxPUUJ8Lv4no/+gMZLXDgdEUX2PDQu6H
+      secure: +Vzw1TrGucj75tc1p/zRLBTZ3ku55hBUXgYwu94AUZBBJs92U8WHVrVuFZnHzXOk
     skip_symbols: true
     artifact: /.*\.nupkg/  
